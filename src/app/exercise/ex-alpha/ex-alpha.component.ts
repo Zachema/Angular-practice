@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Subject} from 'rxjs';
+import { map,catchError,filter,distinct,debounceTime,switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-ex-alpha',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExAlphaComponent implements OnInit {
 
-  constructor() { }
+
+  latestSearch = new Subject<string>();
+
+  searchLanguage:string ='javascript'
+  searchTerm:string;
+
+  results;
+
+  constructor(private http:HttpClient) {
+   }
 
   ngOnInit(): void {
+    this.results = this.latestSearch.pipe(
+      // TODO request github api
+      switchMap(data => this.http.get(''))
+    )
+  }
+
+  changeHandler(e){
+    // TODO debounce it
+    this.latestSearch.next(e.target.value) //emit every string input when
   }
 
 }

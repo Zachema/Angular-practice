@@ -1,1 +1,16 @@
-<p>ex-alpha works!</p>
+<div class="container">
+  <form>
+    <mat-form-field>
+      <mat-label for="search-input">search your repo here</mat-label>
+      <input id="search-input" matInput  name="searchInput" type="text" [(ngModel)]="searchTerm" (ngModelChange)="changeHandler($event)">
+    </mat-form-field>
+  </form>
+  <mat-divider>
+  </mat-divider>
+
+  <div class="results-container">
+    <div *ngFor="let result of results |async">
+      {{result}}
+    </div>
+  </div>
+</div>

@@ -12,6 +12,8 @@ import { MatBadgeModule} from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule} from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 const materialModules = [
   MatToolbarModule,
@@ -23,7 +25,9 @@ const materialModules = [
   MatBadgeModule,
   MatCardModule,
   MatCheckboxModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatFormFieldModule,
+  MatInputModule,
 ]
 
 
