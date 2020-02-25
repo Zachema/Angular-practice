@@ -8,9 +8,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Autocomplete
 
-feature:
-> Don't trigger a network round trip on every keypress.
-> Prevent out of order processing.
+#### feature
+
+- Don't trigger a network round trip on every keypress.
+- Prevent out of order processing.
 
 ## Dir structure
 
@@ -18,7 +19,7 @@ every practice using a main component named as `ex-alpha` in `exercise` folder, 
 
 ## Special thanks
 
-- [Angular and RxJS by Stephen Fluin](https://www.youtube.com/watch?v=aYurQaN3RoE)s
+- [Angular and RxJS by Stephen Fluins](https://www.youtube.com/watch?v=aYurQaN3RoE)
 
 ## License
 
