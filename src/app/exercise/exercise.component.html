@@ -1,0 +1,14 @@
+<app-header (toggleEvent)="toggle()"></app-header>
+
+<mat-sidenav-container>
+
+  <mat-sidenav mode="side" [opened]="isSidenavOpen">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+<app-footer></app-footer>

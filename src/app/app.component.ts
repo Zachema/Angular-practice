@@ -8,9 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular-practice';
 
-  isSidenavOpen:boolean = true;
-
-  toggle(){
-    this.isSidenavOpen = !this.isSidenavOpen;
-  }
 }

@@ -8,6 +8,8 @@ import { ExGammaComponent } from './ex-gamma/ex-gamma.component';
 import { ExDeltaComponent } from './ex-delta/ex-delta.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MaterialsModule } from '../materials/materials.module';
+import { ExerciseComponent } from './exercise.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -17,12 +19,14 @@ import { MaterialsModule } from '../materials/materials.module';
     ExAlphaComponent,
     ExBetaComponent,
     ExGammaComponent,
-    ExDeltaComponent
+    ExDeltaComponent,
+    ExerciseComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
+    SharedModule,
     ReactiveFormsModule,
     MaterialsModule
   ]
