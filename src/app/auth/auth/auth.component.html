@@ -1,2 +1,14 @@
-<h2>Setup page</h2>
-
+<div class="container">
+  <h2>Angular Practice by Zchary</h2>
+  <form [formGroup]="form" #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Input your nickname:</mat-label>
+      <input matInput id="name" placeholder="name" formControlName="userName" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Input your email:</mat-label>
+      <input matInput id="email" placeholder="email" formControlName="userEmail">
+    </mat-form-field>
+    <button type="submit" mat-button [disabled]="!userForm.form.valid">submit</button>
+  </form>
+</div>

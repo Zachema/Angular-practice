@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { ExerciseModule } from './exercise/exercise.module';
+import { AuthModule } from './auth/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ExerciseModule } from './exercise/exercise.module';
     MatSidenavModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

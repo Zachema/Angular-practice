@@ -9,13 +9,19 @@ import { AuthService } from './services/auth.service';
 import { ExerciseComponent } from './exercise/exercise.component';
 
 const routes: Routes = [
-  { path: 'auth', component: AuthComponent, canActivate: [AuthService] },
+  {
+    path: 'auth',
+    component: AuthComponent,
+    // TODO router authentication
+    //  canActivate: [AuthService]
+  },
   {
     path: 'main', component: ExerciseComponent, children: [
       { path: 'alpha', component: ExAlphaComponent },
       { path: 'beta', component: ExBetaComponent },
       { path: 'gamma', component: ExGammaComponent },
-      { path: 'delta', component: ExDeltaComponent }
+      { path: 'delta', component: ExDeltaComponent },
+      { path: '**', redirectTo: '/main/alpha',pathMatch:'full'},
       // {path:'epsilon',component:},
     ]
   },
