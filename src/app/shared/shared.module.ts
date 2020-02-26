@@ -4,15 +4,16 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MaterialsModule } from '../materials/materials.module';
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidenavComponent],
   imports: [
     CommonModule,
     MaterialsModule,
+    RouterModule,
   ],
-  exports:[
+  exports: [
     HeaderComponent,
     FooterComponent,
     SidenavComponent
