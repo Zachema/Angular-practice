@@ -5,23 +5,21 @@ import { AuthComponent } from './auth/auth/auth.component';
 import { ExBetaComponent } from './exercise/ex-beta/ex-beta.component';
 import { ExGammaComponent } from './exercise/ex-gamma/ex-gamma.component';
 import { ExDeltaComponent } from './exercise/ex-delta/ex-delta.component';
-import { AuthService } from './services/auth.service';
+import { AuthGuard } from './guard/auth.guard';
 import { ExerciseComponent } from './exercise/exercise.component';
 
 const routes: Routes = [
   {
     path: 'auth',
     component: AuthComponent,
-    // TODO router authentication
-    //  canActivate: [AuthService]
   },
   {
     path: 'main', component: ExerciseComponent, children: [
-      { path: 'alpha', component: ExAlphaComponent },
+      { path: 'alpha', component: ExAlphaComponent, canActivate: [AuthGuard], },
       { path: 'beta', component: ExBetaComponent },
       { path: 'gamma', component: ExGammaComponent },
       { path: 'delta', component: ExDeltaComponent },
-      { path: '**', redirectTo: '/main/alpha',pathMatch:'full'},
+      { path: '**', redirectTo: '/main/alpha', pathMatch: 'full' },
       // {path:'epsilon',component:},
     ]
   },
@@ -29,7 +27,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
