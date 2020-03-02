@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ExAlphaComponent } from './ex-alpha/ex-alpha.component';
 import { ExBetaComponent } from './ex-beta/ex-beta.component';
@@ -28,6 +29,7 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     SharedModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MaterialsModule
   ]
 })

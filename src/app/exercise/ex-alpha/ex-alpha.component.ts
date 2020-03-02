@@ -30,7 +30,9 @@ export class ExAlphaComponent implements OnInit {
 
   changeHandler(e){
     // TODO debounce it
-    this.latestSearch.next(e.target.value) //emit every string input when
+    const value = e.target.value
+    console.log(value);
+    this.latestSearch.next(value) //emit every string input when
   }
 
 }
