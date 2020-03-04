@@ -11,7 +11,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MaterialsModule } from '../materials/materials.module';
 import { ExerciseComponent } from './exercise.component';
 import { SharedModule } from '../shared/shared.module';
-
+import { ThreeModule } from '../Three/three.module';
 
 
 
@@ -30,7 +30,8 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MaterialsModule
+    MaterialsModule,
+    ThreeModule
   ]
 })
 export class ExerciseModule { }

@@ -7,7 +7,7 @@ import { ThreeAlphaService } from './three-alpha.service';
 })
 export class ThreeAlphaComponent implements OnInit {
 
-  @ViewChild('canvas')
+  @ViewChild('canvas',{static:true})
   public canvasRef:ElementRef<HTMLCanvasElement>;
 
   constructor(private engine:ThreeAlphaService) { }

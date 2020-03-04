@@ -9,6 +9,9 @@ import { ThreeAlphaComponent } from '../Three/three-alpha/three-alpha.component'
     ThreeAlphaComponent],
   imports: [
     CommonModule
+  ],
+  exports:[
+    ThreeAlphaComponent
   ]
 })
 export class ThreeModule { }
