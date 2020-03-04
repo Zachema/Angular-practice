@@ -5,9 +5,10 @@ import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MaterialsModule } from '../materials/materials.module';
 import { RouterModule } from '@angular/router';
+import { CardComponent } from './widgets/card/card.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, SidenavComponent],
+  declarations: [HeaderComponent, FooterComponent, SidenavComponent, CardComponent],
   imports: [
     CommonModule,
     MaterialsModule,
