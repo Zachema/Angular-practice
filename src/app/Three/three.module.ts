@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThreeAlphaComponent } from '../Three/three-alpha/three-alpha.component';
+import { ThreeRoutingModule } from './three-routing.module';
 
 
 
@@ -8,7 +9,8 @@ import { ThreeAlphaComponent } from '../Three/three-alpha/three-alpha.component'
   declarations: [
     ThreeAlphaComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    ThreeRoutingModule
   ],
   exports:[
     ThreeAlphaComponent

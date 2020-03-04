@@ -16,7 +16,7 @@ const routes: Routes = [
   {
     path: 'main', component: ExerciseComponent, children: [
       { path: 'alpha', component: ExAlphaComponent, canActivate: [AuthGuard], },
-      { path: 'beta', component: ExBetaComponent },
+      { path: 'beta', component: ExBetaComponent,loadChildren:()=> import('./Three/three.module').then(m => m.ThreeModule)},
       { path: 'gamma', component: ExGammaComponent },
       { path: 'delta', component: ExDeltaComponent },
       { path: '**', redirectTo: '/main/alpha', pathMatch: 'full' },

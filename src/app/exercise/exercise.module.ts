@@ -31,7 +31,6 @@ import { ThreeModule } from '../Three/three.module';
     ReactiveFormsModule,
     HttpClientModule,
     MaterialsModule,
-    ThreeModule
   ]
 })
 export class ExerciseModule { }
